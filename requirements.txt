@@ -1,0 +1,4 @@
+pyyaml
+presidio-analyzer
+presidio-anonymizer
+langchain-ollama
