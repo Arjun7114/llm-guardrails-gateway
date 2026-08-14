@@ -1,0 +1,22 @@
+# policy.yaml
+# Human-editable rules for the LLM Guardrails Gateway.
+# A non-engineer can change behaviour here without touching Python.
+
+input:
+  block_pii: true
+  pii_threshold: 0.5
+  block_injection: true
+  banned_phrases:
+    - "confidential"
+    - "internal only"
+
+banned_topics:
+  - "competitor"
+  - "lawsuit"
+  - "salary"
+
+output:
+  block_toxicity: true
+  require_non_empty: true
+
+refusal_message: "I'm sorry, but I can't help with that request."
